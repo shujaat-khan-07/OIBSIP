@@ -1,0 +1,533 @@
+:root {
+    --dark-violet: hsl(256, 26%, 20%);
+    --greyish-blue: hsl(216, 30%, 68%);
+    --very-dark-violet: hsl(270, 9%, 17%);
+    --dark-grayish-violet: hsl(273, 4%, 51%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", serif;
+    font-size: 16px;
+    background-color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 3rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 200px;
+    line-height: 1.625rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    /* Ensure pseudo-elements are positioned relative to this container */
+    z-index: 2;
+    /* Adjust stacking order if necessary */
+}
+
+.logo-header {
+    height: 18px;
+    padding-left: 2rem;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, 1);
+    color: var(--DarkGrayishViolet);
+    height: 80px;
+}
+
+.navbar-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    /* Adjust this if needed */
+    left: 0;
+    background-color: hsla(0, 0%, 100%, 1);
+    width: 100%;
+    z-index: 10;
+}
+
+/* Show navbar links when active */
+.navbar-links.active {
+    display: block;
+    background: hsla(271, 9%, 17%, 1);
+    color: white;
+    height: 100vh;
+    background-image: url(./images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom;
+}
+
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navbar-links li {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    color: white;
+}
+
+.nav-item {
+    padding: 0 1rem;
+}
+
+.nav__link--button {
+    border: 2px white solid;
+    text-align: center;
+    cursor: pointer;
+}
+
+.toggle-button {
+    display: flex;
+    padding-right: 2rem;
+
+}
+
+.intro {
+    background-color: #2D2641;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.reverse-mobile {
+    flex-direction: column-reverse;
+}
+
+
+.intro-img {
+    width: 100%;
+}
+
+.intro-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 4.375rem 1.5rem;
+
+}
+
+.intro-text p {
+    padding-bottom: 1rem;
+}
+
+.plans-btn {
+    align-self: center;
+    height: 2.5rem;
+    width: 160px;
+    border: solid 1px white;
+    color: white;
+    background-color: #2D2641;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.divider hr {
+    height: 1px;
+    background: hsla(296, 30%, 68%, 1);
+    width: 150px;
+
+}
+
+.we-are-different {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 9rem 1.5rem 6rem 1.5rem;
+}
+
+.we-are-different h1 {
+    padding-bottom: 4rem;
+    padding-top: 1.5rem;
+}
+
+.we-are-different h2 {
+    font-family: "DM Serif Display", serif;
+}
+
+.we-are-different p {
+    color: hsla(271, 5%, 51%, 1);
+    padding-bottom: 2rem;
+}
+
+.we-are-different img {
+    height: 86px;
+    width: 86px;
+}
+
+.find-out {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 6rem;
+}
+
+
+.find-out-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #2D2641;
+    color: hsla(0, 0%, 100%, 1);
+    max-width: 80%;
+    height: 344px;
+
+}
+
+.find-out-btn {
+    align-self: center;
+    height: 2.5rem;
+    width: 160px;
+    border: solid 1px white;
+    color: white;
+    background-color: #2D2641;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+.find-out h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 40px;
+    padding: 1rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: var(--VeryLightGray);
+}
+
+.footer-logo {
+    padding-top: 4rem;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 144px;
+    padding: 2rem 0;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.divider-2 {
+    height: 1px;
+    background: hsla(0, 0%, 86%, 1);
+    width: 80%;
+}
+
+.footer-blurb {
+    text-transform: uppercase;
+    color: hsla(256, 26%, 20%, 1);
+    font-size: 13px;
+    font-weight: 700;
+    padding-top: 2rem;
+    line-height: 15.2px;
+    letter-spacing: 2px;
+}
+
+.footer-blurb p {
+    color: hsla(271, 5%, 51%, 1);
+    padding-bottom: 1rem;
+}
+
+.footer-blurb ul {
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 1rem;
+}
+
+.footer-blurb li {
+    padding-bottom: .8rem;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 768px) {
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        position: relative;
+        /* Necessary for positioning pseudo-elements */
+        overflow: hidden;
+        /* Prevent pseudo-elements from sticking out */
+        z-index: 0;
+    }
+
+    .container::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 494px;
+        left: 0;
+        /* Adjust as needed */
+        background-image: url("./images/bg-pattern-intro-left-desktop.svg");
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+    .container::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        top: -1px;
+        /* Adjust as needed */
+        background-image: url("./images/bg-pattern-intro-right-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: right top;
+        z-index: 1;
+    }
+
+
+    .navbar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    /* Flex row for logo and links */
+    .logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .navbar-links {
+        display: flex;
+        align-items: center;
+        position: static;
+        max-width: 60%;
+        /* Remove absolute positioning */
+        background-image: none;
+    }
+
+    .navbar-links ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        /* Adjust spacing between links as desired */
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-links li a {
+        color: hsla(271, 5%, 51%, 1);
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 700;
+    }
+
+    li#id-1 {
+        color: #2D2641;
+    }
+
+    .navbar-links li a:hover,
+    .navbar-links li a:focus {
+        color: hsla(271, 9%, 17%, 1);
+
+    }
+
+    ul li:last-child a {
+        border: solid 2px hsla(271, 9%, 17%, 1);
+        color: hsla(271, 9%, 17%, 1);
+        padding: .7rem;
+    }
+
+    ul li:last-child a:hover {
+        background-color: hsla(271, 9%, 17%, 1);
+        color: white;
+    }
+
+
+    .toggle-button {
+        display: none;
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .intro-text {
+        width: 50%;
+        text-align: left;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+
+    .intro-img {
+        width: 100%;
+        height: 650px;
+        position: relative;
+        top: 185px;
+        padding-left: 2rem;
+    }
+
+    .plans-btn {
+        align-self: flex-start;
+    }
+
+    .plans-btn:hover,
+    .find-out-btn:hover {
+        color: hsla(271, 9%, 17%, 1);
+        background-color: white;
+    }
+
+    /* We are different */
+
+    .different-container {
+        max-width: 90%;
+    }
+
+    .divider {
+        align-self: flex-start;
+        padding-left: 3rem;
+    }
+
+    .different h1 {
+        padding-left: 3rem;
+    }
+
+    .different-details {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: left;
+        width: 90%;
+        gap: 30px;
+    }
+
+    .different-heading {
+        align-self: flex-start;
+    }
+
+    /* Find out */
+
+    .find-out-container {
+        max-width: 90%;
+        width: 100vw;
+        height: 250px;
+        margin: 0;
+        padding: 2rem 0;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        background-image: url('./images/bg-pattern-how-we-work-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding: 2rem;
+    }
+
+    .find-out-h2 {
+        flex-basis: 50%;
+    }
+
+    /* Footer Logo */
+    .footer-logo {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .icon:hover {
+        fill: hsla(271, 9%, 17%, 1);
+        cursor: pointer;
+    }
+
+    .footer-img {
+        padding-top: 2rem;
+    }
+
+    .footer-blurb {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: left;
+        width: 90%;
+        gap: 4rem;
+    }
+
+    .attribution {
+        padding-bottom: 2rem;
+    }
+}
+
+
+/*Desktop*/
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
